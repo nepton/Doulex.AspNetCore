@@ -73,7 +73,6 @@
 
     <ItemGroup>
       <Folder Include="Authorization" />
-      <Folder Include="Scrutor" />
       <Folder Include="Swagger" />
     </ItemGroup>
 
