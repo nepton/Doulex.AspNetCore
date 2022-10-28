@@ -8,34 +8,40 @@
     </PropertyGroup>
 
     <PropertyGroup>
-        <PackageId>Doulex.AspNetCore</PackageId>
-        <VersionPrefix>1.0.0</VersionPrefix>
-        <Description>Asp net core project toolkit</Description>
-        <PackageTags>aspnet;aspnetcore;toolkit</PackageTags>
         <PackageIcon>icon.png</PackageIcon>
     </PropertyGroup>
 
     <PropertyGroup>
-        <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-        <PackageProjectUrl>https://github.com/nepton/doulex-asp-net-core</PackageProjectUrl>
-        <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+        <PackageId>Doulex.AspNetCore</PackageId>
+        <Description>Asp net core project toolkit</Description>
+        <PackageTags>aspnet;aspnetcore;toolkit</PackageTags>
+        <PackageProjectUrl>https://github.com/nepton/Doulex.AspNetCore</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/nepton/Doulex.AspNetCore.git</RepositoryUrl>
+
         <Authors>Nepton Liu</Authors>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <IncludeSymbols>True</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-        <!--DEBUG无需发布, 解决保存问题-->
-        <NuGetPublishLocation>.</NuGetPublishLocation>
-    </PropertyGroup>
-    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-        <NuGetPublishType>remote</NuGetPublishType>
-        <NuGetPublishLocation>https://api.nuget.org/v3/index.json</NuGetPublishLocation>
+    <PropertyGroup Condition="'$(APPVEYOR)' == 'true'">
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Update="icon.png" Pack="true" PackagePath="\" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
+        <None Include="..\..\readme.md" Pack="true" PackagePath="\" />
     </ItemGroup>
 
     <ItemGroup>
@@ -67,6 +73,7 @@
 
     <ItemGroup>
       <Folder Include="Authorization" />
+      <Folder Include="Scrutor" />
       <Folder Include="Swagger" />
     </ItemGroup>
 

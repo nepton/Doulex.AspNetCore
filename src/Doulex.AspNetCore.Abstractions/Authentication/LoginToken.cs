@@ -9,6 +9,7 @@ public record LoginToken
 {
     /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
     public LoginToken(
+        string   providerName,
         string   id,
         string   name,
         string   screenName,
@@ -17,14 +18,17 @@ public record LoginToken
         string   avatarUrl,
         string[] roles)
     {
-        Id          = id;
-        PhoneNumber = phoneNumber;
-        Email       = email;
-        Name        = name;
-        Roles       = new EquatableHashSet<string>(roles);
-        ScreenName  = screenName;
-        AvatarUrl   = avatarUrl;
+        ProviderName = providerName;
+        Id           = id;
+        PhoneNumber  = phoneNumber;
+        Email        = email;
+        Name         = name;
+        Roles        = new EquatableHashSet<string>(roles);
+        ScreenName   = screenName;
+        AvatarUrl    = avatarUrl;
     }
+
+    public string ProviderName { get; }
 
     /// <summary>
     /// Id
@@ -65,4 +69,9 @@ public record LoginToken
     /// 如果从微信认证的用户, 提供微信OpenId
     /// </summary>
     public string? WechatOpenId { get; set; }
+
+    /// <summary>
+    /// 是否是系统管理员, 拥有最高的权限
+    /// </summary>
+    public bool IsSuperUser { get; set; } = false;
 }

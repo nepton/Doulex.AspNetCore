@@ -12,5 +12,5 @@ public interface ILoginUserAuthorizationService
     /// <param name="apiPermissionDemand">如果权限要求为null, 则仅判断用户是否可以登录即可</param>
     /// <param name="cancellationToken"></param>
     /// <returns></returns>
-    Task EnsureUserHasAuthorizedAsync(string policyName, string? apiPermissionDemand, CancellationToken cancellationToken=default);
+    Task EnsureUserHasAuthorizedAsync(string policyName, string? apiPermissionDemand, CancellationToken cancel=default);
 }
