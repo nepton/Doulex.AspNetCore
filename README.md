@@ -8,10 +8,10 @@
 
 ## Nuget packages
 
-| Name                                      | Version                                                                                                                                                             | Downloads                                                                                                                                                            |
-|-------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Doulex.AspNetCore                     | [![nuget](https://img.shields.io/nuget/v/Doulex.AspNetCore.svg)](https://www.nuget.org/packages/Doulex.AspNetCore/)                                         | [![stats](https://img.shields.io/nuget/dt/Doulex.AspNetCore.svg)](https://www.nuget.org/packages/Doulex.AspNetCore/)                                         |
-| Doulex.AspNetCore.Abstractions              | [![nuget](https://img.shields.io/nuget/v/Doulex.AspNetCore.Abstractions.svg)](https://www.nuget.org/packages/Doulex.AspNetCore.Abstractions/)                           | [![stats](https://img.shields.io/nuget/dt/Doulex.AspNetCore.Abstractions.svg)](https://www.nuget.org/packages/Doulex.AspNetCore.Abstractions/)                           |
+| Name                           | Version                                                                                                                                       | Downloads                                                                                                                                      |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
+| Doulex.AspNetCore              | [![nuget](https://img.shields.io/nuget/v/Doulex.AspNetCore.svg)](https://www.nuget.org/packages/Doulex.AspNetCore/)                           | [![stats](https://img.shields.io/nuget/dt/Doulex.AspNetCore.svg)](https://www.nuget.org/packages/Doulex.AspNetCore/)                           |
+| Doulex.AspNetCore.Abstractions | [![nuget](https://img.shields.io/nuget/v/Doulex.AspNetCore.Abstractions.svg)](https://www.nuget.org/packages/Doulex.AspNetCore.Abstractions/) | [![stats](https://img.shields.io/nuget/dt/Doulex.AspNetCore.Abstractions.svg)](https://www.nuget.org/packages/Doulex.AspNetCore.Abstractions/) |
 
 ## Usage
 
