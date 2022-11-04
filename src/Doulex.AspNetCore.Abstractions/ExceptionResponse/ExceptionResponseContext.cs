@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Http;
 
-namespace Doulex.AspNetCore.CustomExceptionHandler;
+namespace Doulex.AspNetCore.ExceptionResponse;
 
 /// <summary>
 /// 用户异常处理上下文
 /// </summary>
-public class CustomExceptionContext
+public class ExceptionResponseContext
 {
-    public CustomExceptionContext(HttpContext context, Exception exception)
+    public ExceptionResponseContext(HttpContext context, Exception exception)
     {
         Context = context;
         Exception = exception;

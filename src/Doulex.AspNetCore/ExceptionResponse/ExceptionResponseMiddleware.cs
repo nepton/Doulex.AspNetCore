@@ -1,18 +1,18 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 
-namespace Doulex.AspNetCore.CustomExceptionHandler;
+namespace Doulex.AspNetCore.ExceptionResponse;
 
 /// <summary>
 /// 用户异常处理程序, 这一类的异常信息不属于程序错误, 因此, 不在标准异常处理模块执行
 /// </summary>
-public class CustomExceptionMiddleware
+public class ExceptionResponseMiddleware
 {
-    private readonly RequestDelegate                    _next;
-    private readonly ILogger<CustomExceptionMiddleware> _logger;
-    private readonly ICustomExceptionHandler?           _handler;
+    private readonly RequestDelegate                      _next;
+    private readonly ILogger<ExceptionResponseMiddleware> _logger;
+    private readonly IExceptionResponseHandler?           _handler;
 
-    public CustomExceptionMiddleware(RequestDelegate next, ILogger<CustomExceptionMiddleware> logger, ICustomExceptionHandler handler)
+    public ExceptionResponseMiddleware(RequestDelegate next, ILogger<ExceptionResponseMiddleware> logger, IExceptionResponseHandler handler)
     {
         _next    = next;
         _logger  = logger;
@@ -48,7 +48,7 @@ public class CustomExceptionMiddleware
         }
 
         // 交由用户定义的模块处理
-        var handleContext = new CustomExceptionContext(context, exception);
+        var handleContext = new ExceptionResponseContext(context, exception);
         await _handler.HandleExceptionAsync(handleContext);
 
         // 如果用户没有设置回应, 返回 False, 

@@ -1,4 +1,4 @@
-﻿namespace Doulex.AspNetCore.CustomExceptionHandler;
+﻿namespace Doulex.AspNetCore.ExceptionResponse;
 
 /// <summary>
 /// 内容返回接口

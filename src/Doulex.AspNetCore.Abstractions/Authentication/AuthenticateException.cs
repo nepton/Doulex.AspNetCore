@@ -1,7 +1,8 @@
 ﻿namespace Doulex.AspNetCore.Authentication;
 
 /// <summary>
-/// Token 未认证异常, 每一次请求携带的 Token 无法认证通过，抛出此异常
+/// User authentication exception
+/// Indicates that the user is not authenticated 401
 /// </summary>
 public class AuthenticateException : Exception
 {

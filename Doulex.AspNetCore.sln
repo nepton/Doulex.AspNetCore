@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.AspNetCore", "src\Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.AspNetCore.Abstractions", "src\Doulex.AspNetCore.Abstractions\Doulex.AspNetCore.Abstractions.csproj", "{2D828281-FFF9-478E-AAC4-1F077FEA7602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Doulex.DotNetCore", "src\Doulex.DotNetCore\Doulex.DotNetCore.csproj", "{D471F60A-BE35-464A-90C7-7F0373EDB4FD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,10 +25,6 @@ Global
 		{2D828281-FFF9-478E-AAC4-1F077FEA7602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D828281-FFF9-478E-AAC4-1F077FEA7602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D828281-FFF9-478E-AAC4-1F077FEA7602}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D471F60A-BE35-464A-90C7-7F0373EDB4FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D471F60A-BE35-464A-90C7-7F0373EDB4FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D471F60A-BE35-464A-90C7-7F0373EDB4FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D471F60A-BE35-464A-90C7-7F0373EDB4FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,7 +32,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{66FBCAB9-423E-44FC-896E-F9492D4F7C70} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
 		{2D828281-FFF9-478E-AAC4-1F077FEA7602} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
-		{D471F60A-BE35-464A-90C7-7F0373EDB4FD} = {5309EC62-08D3-4CB5-B295-0D389CFBDDA1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3CA6DE1A-C1A0-4BE1-B7BF-D3052CD20581}

@@ -6,7 +6,7 @@ namespace Doulex.AspNetCore.Authorization.PolicyBasedAuthorization;
 /// <summary>
 /// 包装的基于策略的认证声明和配置 
 /// </summary>
-public static class PolicyBasedAuthorizationExtensions
+public static class PolicyBasedAuthorizationDependencyInjection
 {
     public static PolicyBasedAuthorizationBuilder AddPolicyBasedAuthorization(this IServiceCollection services)
     {

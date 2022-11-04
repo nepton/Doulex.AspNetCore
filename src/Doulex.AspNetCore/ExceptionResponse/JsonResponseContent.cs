@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace Doulex.AspNetCore.CustomExceptionHandler;
+namespace Doulex.AspNetCore.ExceptionResponse;
 
 /// <summary>
 /// 返回JSON对象类型

@@ -1,8 +1,8 @@
-﻿namespace Doulex.AspNetCore.CustomExceptionHandler;
+﻿namespace Doulex.AspNetCore.ExceptionResponse;
 
-public class CustomExceptionOptions
+public class ExceptionResponseOptions
 {
-    public void SetHandler<T>() where T : ICustomExceptionHandler
+    public void SetHandler<T>() where T : IExceptionResponseHandler
     {
         HandlerType = typeof(T);
     }
