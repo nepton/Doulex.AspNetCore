@@ -1,10 +1,8 @@
 ﻿# Doulex.AspNetCore
 
-[![Build status](https://ci.appveyor.com/api/projects/status/evbtetf22sxxrph7?svg=true)](https://ci.appveyor.com/project/nepton/Thingsboard.Net)
+[![Build status](https://ci.appveyor.com/api/projects/status/evbtetf22sxxrph7?svg=true)](https://ci.appveyor.com/project/nepton/Doulex.AspNetCore)
 ![GitHub issues](https://img.shields.io/github/issues/nepton/Doulex.AspNetCore.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nepton/Doulex.AspNetCore/blob/master/LICENSE)
-
-**All client API are tested in Thingsboard v3.4.x**
 
 ## Nuget packages
 
@@ -15,7 +13,7 @@
 
 ## Usage
 
-Creating a client and trying to invoke getCurrentUser method:
+> TODO
 
 ## Final
 

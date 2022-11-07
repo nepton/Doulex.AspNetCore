@@ -56,26 +56,15 @@ public abstract class PolicyBasedAuthorizeAttribute : Attribute, IAuthorizeData,
     /// <summary>
     /// Gets or sets a comma delimited list of schemes from which user information is constructed.
     /// </summary>
-    string? IAuthorizeData.AuthenticationSchemes
-    {
-        get;
-        set;
-    }
+    string? IAuthorizeData.AuthenticationSchemes { get; set; }
 
     /// <summary>
     /// Gets or sets a comma delimited list of roles that are allowed to access the resource.
     /// </summary>
-    string? IAuthorizeData.Roles
-    {
-        get;
-        set;
-    }
+    string? IAuthorizeData.Roles { get; set; }
 
     /// <summary>
     /// 授权的描述信息 (For Dev)
     /// </summary>
-    public abstract string Description
-    {
-        get;
-    }
+    public abstract string Description { get; }
 }

@@ -11,5 +11,5 @@ public interface ILoginTokenPersistence
     /// <param name="loginToken"></param>
     /// <param name="cancel"></param>
     /// <returns></returns>
-    Task SaveLoginUserAsync(LoginToken loginToken, CancellationToken cancel = default);
+    Task SaveLoginUserAsync(UserToken loginToken, CancellationToken cancel = default);
 }

@@ -5,10 +5,10 @@ namespace Doulex.AspNetCore.Authentication;
 /// <summary>
 /// 当前登录 Token
 /// </summary>
-public record LoginToken
+public record UserToken
 {
     /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
-    public LoginToken(
+    public UserToken(
         string   providerName,
         string   id,
         string   name,

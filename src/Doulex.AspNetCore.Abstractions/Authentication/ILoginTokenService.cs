@@ -10,7 +10,7 @@ public interface ILoginTokenService
     /// </summary>
     /// <param name="cancel"></param>
     /// <returns></returns>
-    Task<LoginToken?> GetTokenAsync(CancellationToken cancel = default);
+    Task<UserToken?> GetTokenAsync(CancellationToken cancel = default);
 
     /// <summary>
     /// 当前是否已登录

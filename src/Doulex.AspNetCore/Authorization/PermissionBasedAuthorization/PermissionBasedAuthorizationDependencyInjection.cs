@@ -4,21 +4,27 @@ using Microsoft.Extensions.DependencyInjection;
 namespace Doulex.AspNetCore.Authorization.PermissionBasedAuthorization;
 
 /// <summary>
-/// 项目的认证声明和配置 
+/// Extension methods for adding permission based authorization services to the DI container. 
 /// </summary>
 public static class PermissionBasedAuthorizationDependencyInjection
 {
     /// <summary>
-    /// 配置授权
+    /// Add permission based authorization services to the DI container.
     /// </summary>
     /// <param name="services"></param>
-    public static void AddPermissionBasedAuthorization<TPermission>(this IServiceCollection services)
+    /// <typeparam name="TPermissionBasedAuthorizationService">The permission authorization service</typeparam>
+    /// <typeparam name="TPermissionBasedRequirement">The permission authorization metadata</typeparam>
+    /// <exception cref="ArgumentNullException"></exception>
+    public static void AddPermissionBasedAuthorization<TPermissionBasedAuthorizationService, TPermissionBasedRequirement>(this IServiceCollection services)
+        where TPermissionBasedAuthorizationService : class, IPermissionBasedAuthorizationService<TPermissionBasedRequirement>
+        where TPermissionBasedRequirement : PermissionBasedRequirement
     {
         if (services == null)
             throw new ArgumentNullException(nameof(services));
 
-        // 授权接口
+        services.AddTransient<TPermissionBasedAuthorizationService>();
+
         services.AddPolicyBasedAuthorization()
-            .AddAuthorizationHandler<PermissionAuthorizationHandler<TPermission>>();
+            .AddAuthorizationHandler<PermissionBasedAuthorizationHandler<TPermissionBasedAuthorizationService, TPermissionBasedRequirement>>();
     }
 }
