@@ -8,7 +8,7 @@ namespace Doulex.AspNetCore.Authorization.PolicyBasedAuthorization;
 /// </summary>
 internal class PolicyBasedAuthorizePolicyProvider : DefaultAuthorizationPolicyProvider
 {
-    public PolicyBasedAuthorizePolicyProvider(IOptionsSnapshot<AuthorizationOptions> options) : base(options)
+    public PolicyBasedAuthorizePolicyProvider(IOptions<AuthorizationOptions> options) : base(options)
     {
     }
 
