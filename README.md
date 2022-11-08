@@ -1,6 +1,6 @@
 ﻿# Doulex.AspNetCore
 
-[![Build status](https://ci.appveyor.com/api/projects/status/evbtetf22sxxrph7?svg=true)](https://ci.appveyor.com/project/nepton/Doulex.AspNetCore)
+[![Build status](https://ci.appveyor.com/api/projects/status/vu0egwkhtyb86gi8?svg=true)](https://ci.appveyor.com/project/nepton/doulex-aspnetcore)
 ![GitHub issues](https://img.shields.io/github/issues/nepton/Doulex.AspNetCore.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/nepton/Doulex.AspNetCore/blob/master/LICENSE)
 
