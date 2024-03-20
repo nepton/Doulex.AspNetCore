@@ -26,7 +26,7 @@ public class RequestEnrichLoggingMiddleware
         // enable request stream
         if (_options.LoggingFields.HasFlag(HttpFields.RequestBody))
             context.Request.EnableBuffering();
-
+        
         // enable response stream TODO use pool
         var             originalBodyStream = context.Response.Body;
         await using var responseBodyCache  = _options.LoggingFields.HasFlag(HttpFields.ResponseBody) ? (context.Response.Body = new MemoryStream()) as MemoryStream : null;

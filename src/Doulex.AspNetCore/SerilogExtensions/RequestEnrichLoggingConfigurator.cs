@@ -34,7 +34,6 @@ namespace Doulex.AspNetCore.SerilogExtensions
             options ??= new RequestEnrichLoggingOptions();
             configureOptions?.Invoke(options);
 
-            app.UseSerilogRequestLogging();
             app.UseMiddleware<RequestEnrichLoggingMiddleware>(options);
         }
     }

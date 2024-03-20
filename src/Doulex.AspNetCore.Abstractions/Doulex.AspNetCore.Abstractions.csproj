@@ -1,17 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFrameworks>net6.0;net8.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>Doulex.AspNetCore</RootNamespace>
     </PropertyGroup>
+    
+    <ItemGroup Condition="$(TargetFramework) == 'net6.0'">
+        <PackageReference Include="Doulex" Version="1.1.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+    </ItemGroup>
 
-    <ItemGroup>
-        <PackageReference Include="Doulex" Version="1.1.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="6.0.4" />
-        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <ItemGroup Condition="$(TargetFramework) == 'net8.0'">
+        <FrameworkReference Include="Microsoft.AspNetCore.App"/>
+        <PackageReference Include="Doulex" Version="1.1.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="8.0.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
     </ItemGroup>
 
     <PropertyGroup>
@@ -43,8 +50,8 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="..\..\icon.png" Pack="true" PackagePath="\" />
-        <None Include="..\..\readme.md" Pack="true" PackagePath="\" />
+        <None Include="..\..\icon.png" Pack="true" PackagePath="\"/>
+        <None Include="..\..\readme.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
 
 </Project>

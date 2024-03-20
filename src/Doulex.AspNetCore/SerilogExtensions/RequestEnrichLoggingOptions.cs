@@ -21,7 +21,7 @@
         /// </summary>
         public HashSet<string>? RequestHeaders { get; set; } = null;
 
-        private static readonly HashSet<string> _basicRequestHeaders = new()
+        private static readonly HashSet<string> _commonRequestHeaders = new()
         {
             "Content-Type",
             "Content-Length",
@@ -33,9 +33,9 @@
             "Referer",
         };
 
-        public bool IncludeRequestHeaders(string name)
+        internal bool IncludeRequestHeaders(string name)
         {
-            if (IncludeCommonHeaders && _basicRequestHeaders.Contains(name))
+            if (IncludeCommonHeaders && _commonRequestHeaders.Contains(name))
                 return true;
 
             if (RequestHeaders?.Contains(name) == true)
@@ -49,15 +49,15 @@
         /// </summary>
         public HashSet<string>? ResponseHeaders { get; set; } = null;
 
-        private static readonly HashSet<string> _basicResponseHeaders = new()
+        private static readonly HashSet<string> _commonResponseHeaders = new()
         {
             "Content-Type",
             "Content-Length",
         };
 
-        public bool IncludeResponseHeaders(string name)
+        internal bool IncludeResponseHeaders(string name)
         {
-            if (IncludeCommonHeaders && _basicResponseHeaders.Contains(name))
+            if (IncludeCommonHeaders && _commonResponseHeaders.Contains(name))
                 return true;
 
             if (ResponseHeaders?.Contains(name) == true)
