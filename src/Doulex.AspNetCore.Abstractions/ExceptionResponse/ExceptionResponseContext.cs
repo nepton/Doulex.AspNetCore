@@ -3,28 +3,28 @@
 namespace Doulex.AspNetCore.ExceptionResponse;
 
 /// <summary>
-/// 用户异常处理上下文
+/// User exception handling context
 /// </summary>
 public class ExceptionResponseContext
 {
     public ExceptionResponseContext(HttpContext context, Exception exception)
     {
-        Context = context;
+        Context   = context;
         Exception = exception;
     }
 
     /// <summary>
-    /// 请求上下文, 请设置 Response 而不要修改上下文
+    /// To request a context, set the Response instead of modifying the context
     /// </summary>
     public HttpContext Context { get; }
 
     /// <summary>
-    /// 异常对象
+    /// Exception objects
     /// </summary>
     public Exception Exception { get; }
 
     /// <summary>
-    /// 返回的内容(如果这不是用户异常, 不要设置异常返回值)
+    /// What is returned (if this is not a user exception, do not set the exception return value)
     /// </summary>
     public IResponseContent? Response { get; set; }
 }
